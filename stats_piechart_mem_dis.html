@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Club Stats Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="https://e2009.s3.us-west-1.amazonaws.com/Screenshot+2023-12-09+at+10.00.54%E2%80%AFPM.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1/dist/chart.xkcd.min.js"></script>
+</head>
+<body>
+    <svg class="pie-chart"></svg>
+    <script>
+        const svg = document.querySelector('.pie-chart');
+        const pieChart = new chartXkcd.Pie(svg, {
+            title: 'Club Membership Distribution', // Change title as needed
+            data: {
+                labels: ['Freshman', 'Sophomore', 'Junior', 'Senior'],
+                datasets: [{
+                    data: [3, 3, 1, 1], // Update these values as per your data
+                }],
+            },
+            options: {
+                innerRadius: 0.5,
+                legendPosition: chartXkcd.config.positionType.upRight,
+            },
+        });
+    </script>
+</body>
+</html>
